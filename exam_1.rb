@@ -1,16 +1,20 @@
-# You will write a method find_factorial(num) that takes in an Integer
-# The method should returns the product of all numbers from 1 up to and including num
+# You will write a method reverse(word) that takes in a String
+# The method returns the word with its letters in reverse order
+# You may not use the String#reverse or String#reverse! method
 
-def find_factorial(num)
-    a = num
-    while num.to_s.length > 1
-        find_factorial = num.to_s
-      a += 1
-    end
-  
+def reverse(word)
+   reversed = []
+   word = word.split("")
+   reversed << word.pop
+   p word
+   return reversed
+end
 
-puts find_factorial(3) == 6 # because 1 * 2 * 3 = 6
+puts reverse("cat") == "tac"
 puts
 
-puts find_factorial(5) == 120 # because 1 * 2 * 3 * 4 * 5 = 120
+puts reverse("programming") == "gnimmargorp"
+puts
+
+puts reverse("bootcamp") == "pmactoob"
 puts
